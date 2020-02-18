@@ -17,14 +17,14 @@ export default class Login extends Component {
             <ImageBackground source={require('../assets/imgs/login.jpg')} style={styles.imageLogin}>
                 <View style={styles.content} >                       
                     <Image source={require('../assets/imgs/logo_argumente.png')} style={styles.logo}/> 
-                    <TextInput placeholder="Usuario" style={styles.textFields} />          
+                    <TextInput placeholder="Nome" style={styles.textFields} />          
+                    <TextInput placeholder="Sobrenome" style={styles.textFields}/>
+                    <TextInput placeholder="Usuario (Login)" style={styles.textFields}/>
                     <TextInput placeholder="Senha" style={styles.textFields}/>
-                    <Text style={styles.link}
-                        onPress={() => Linking.openURL('http://google.com')}>
-                        Novo por aqui? Registre-se!
-                    </Text>
+                    <TextInput placeholder="E-Mail" style={styles.textFields}/>
+                    <TextInput placeholder="Código de acesso" style={styles.textFields}/>
                     <TouchableHighlight style={styles.buttons}>
-                        <Button title="Login" />
+                        <Button title="Registre-se" />
                     </TouchableHighlight>
                 </View>        
             </ImageBackground>
