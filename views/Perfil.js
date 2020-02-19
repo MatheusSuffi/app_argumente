@@ -20,7 +20,7 @@ export default class Register extends Component {
                 <View style={styles.header}>
                     <View style={styles.iconStart}>
                         <TouchableWithoutFeedback  onPress={()=>{}}>
-                            <Icon name="chevron-left" size={40} color='#FFF' /> 
+                            <Icon name="chevron-left" size={30} color='#FFF' /> 
                         </TouchableWithoutFeedback>
                     </View>
                     <View >
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         height: '100%'
     },
     header:{ // Style do Header geral
-        backgroundColor:'grey',
+        backgroundColor:'#0066CC',
         width:'100%',
         flexDirection:"row",
         alignItems: 'center',

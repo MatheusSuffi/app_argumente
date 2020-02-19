@@ -20,16 +20,16 @@ export default class Register extends Component {
                 <View style={styles.header}>
                     <View style={styles.iconStart}>
                         <TouchableWithoutFeedback  onPress={()=>{}}>
-                            <Icon name="bars" size={40} color='#FFF' /> 
+                            <Icon name="bars" size={30} color='#FFF' /> 
                         </TouchableWithoutFeedback>
                     </View>
                     <View >
                         <Text style={styles.contentTextHeader} >BEM VINDO, ALUNO!</Text>
-                    </View>
+                    </View> 
 
                 </View>
                 <View style={styles.content_buttons}> 
-                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={()=>{}}>
+                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={() => navigation.navigate('Details')}>
                         <View style={styles.headerButton}>
                             <Icon style={styles.iconStart} name="user" size={30} color='black' />
                             <Text style={styles.textButton} >Perfil</Text>
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
         borderRadius:10,
     },
     header:{ // Style do Header geral
-        backgroundColor:'grey',
+        backgroundColor:'#0066CC',
         width:'100%',
         flexDirection:"row",
         alignItems: 'center',
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         fontFamily: "Arial",
     },
     headerButton:{ //Header de cada um dos botões que vão ficar no corpo da tela
-        borderColor:'grey',
+        borderColor:'#0066CC',
         borderWidth:1,
         borderRadius:10,
         width:'100%',

@@ -20,7 +20,7 @@ export default class Register extends Component {
                 <View style={styles.header}>
                     <View style={styles.iconStart}>
                         <TouchableWithoutFeedback  onPress={()=>{}}>
-                            <Icon name="chevron-left" size={40} color='#FFF' /> 
+                            <Icon name="chevron-left" size={30} color='#FFF' /> 
                         </TouchableWithoutFeedback>
                     </View>
                     <View >
@@ -32,18 +32,21 @@ export default class Register extends Component {
 
                 </View>
 
-                <View style={styles.content_buttons}> 
+                <View style={{marginLeft:30, marginRight: 30, marginTop:20}} > 
                     <TextInput
-                        style={styles.textButton}
-                        value={"Email: matheus_suffi@live.com"}
+                        style={{borderColor: '#0066CC', borderWidth: 1, borderRadius:10 }}
+                        multiline={true}
+                        numberOfLines={12}
+                        textAlignVertical = "top"
+                        value={"Escreva seu comentario: "}
                         />  
                 </View>
 
-                <View style={styles.content_buttons}> 
+                <View style={{marginLeft:30, marginRight: 30, marginTop:20}} > 
                     <TouchableWithoutFeedback style={styles.content_buttons} onPress={()=>{}}>
-                        <View >
-                            <Icon style={styles.iconStart} name="sign-out" size={40} color='black' />
-                            <Text style={styles.textButton} >Sair</Text>
+                        <View style={styles.headerButton}>
+                            <Icon style={styles.iconStart} name="send" size={30} color='black' />
+                            <Text style={styles.textButton} >Enviar Comentario</Text>
                         </View>
                     </TouchableWithoutFeedback>  
                 </View>
@@ -61,7 +64,7 @@ const styles = StyleSheet.create({
         height: '100%'
     },
     header:{ // Style do Header geral
-        backgroundColor:'grey',
+        backgroundColor:'#0066CC',
         width:'100%',
         flexDirection:"row",
         alignItems: 'center',
@@ -84,7 +87,7 @@ const styles = StyleSheet.create({
         fontFamily: "Arial",
     },
     headerButton:{ //Header de cada um dos botões que vão ficar no corpo da tela
-        borderColor:'grey',
+        borderColor:'#0066CC',
         borderWidth:1,
         borderRadius:10,
         width:'100%',
@@ -106,7 +109,6 @@ const styles = StyleSheet.create({
     },
     textButton:{ // Texto dos botões que vão ficar no corpo da tela
         color: 'black',
-        marginLeft:40,
         fontSize: 20
     },
     paddingTop:{ // Texto dos botões que vão ficar no corpo da tela
