@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
         marginTop: 10
     },textFields:{
         backgroundColor: '#AAA',
+        fontFamily: 'Lato',
         width:'70%',
         height:40,
         marginTop: 20
