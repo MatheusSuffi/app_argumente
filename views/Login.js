@@ -8,24 +8,24 @@ import {
         Image,
         Linking,
         Button,
-        TouchableHighlight
+        TouchableOpacity
     } from 'react-native'
-
+import commonStyles from './commonStyles'
 export default class Login extends Component {
     render() {
         return(
             <ImageBackground source={require('../assets/imgs/login.jpg')} style={styles.imageLogin}>
-                <View style={styles.content} >                       
                     <Image source={require('../assets/imgs/logo_argumente.png')} style={styles.logo}/> 
+                <View style={styles.content} >                       
                     <TextInput placeholder="Usuario" style={styles.textFields} />          
                     <TextInput placeholder="Senha" style={styles.textFields}/>
                     <Text style={styles.link}
-                        onPress={() => Linking.openURL('http://google.com')}>
+                        onPress={() => this.props.navigation.navigate('Register')}>
                         Novo por aqui? Registre-se!
                     </Text>
-                    <TouchableHighlight style={styles.buttons}>
-                        <Button title="Login" />
-                    </TouchableHighlight>
+                    <TouchableOpacity style={styles.buttons}>
+                        <Text style={{fontSize: 20, color: '#FFF', fontFamily: commonStyles.fontFamily,}}> Login </Text>
+                    </TouchableOpacity>
                 </View>        
             </ImageBackground>
         )
@@ -34,34 +34,41 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     imageLogin:{
-        flex:1,
-        width:null,
-        height: null
+        height:'100%',
+        width: '100%',
+        alignItems: 'center'
     },content:{
-        flex: 1, 
-        alignItems: 'center', 
-        marginTop: 10
-    },textFields:{
-        backgroundColor: '#AAA',
+        alignItems: 'center',         
+        padding: 20,
+        width: '90%',
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        marginTop: '10%'
+    },
+    textFields:{
+        backgroundColor: '#FFF',
         fontFamily: 'Lato',
-        width:'70%',
-        height:40,
-        marginTop: 20
+        width:'90%',
+        height:35,
+        marginTop: 20,
+        color: '#FFF',
     },
     logo:{
-        marginTop:20,
-        marginBottom:30,
-        width:170,
-        height:150
+        width:200,
+        height:160,
+        marginTop: '15%'
     },
     link:{
-        color:'blue',
-        width:'70%',
+        color:'#FFF',
+        width:'90%',
         textAlign: 'right',
-        fontSize: 20
-    },buttons:{
-        width:'70%',
-        height:40,
+        marginTop: 10,
+        fontSize: 15
+    },
+    buttons:{
+        width:'90%',
+        alignItems: 'center',
+        padding: 10,
+        backgroundColor: '#0066CC',
         marginTop: 20
     }
 })

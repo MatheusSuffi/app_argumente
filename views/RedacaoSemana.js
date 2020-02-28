@@ -10,7 +10,7 @@ import {
         Linking,
         Button,
         TouchableHighlight,
-        TouchableWithoutFeedback
+        TouchableOpacity
     } from 'react-native'
 
 export default class Register extends Component {
@@ -19,9 +19,9 @@ export default class Register extends Component {
             <View style={styles.content} >  
                 <View style={styles.header}>
                     <View style={styles.iconStart}>
-                        <TouchableWithoutFeedback  onPress={()=>{}}>
-                            <Icon name="chevron-left" size={30} color='#FFF' /> 
-                        </TouchableWithoutFeedback>
+                        <TouchableOpacity  onPress={() => this.props.navigation.openDrawer()}>
+                            <Icon name="bars" size={30} color='#FFF'  /> 
+                        </TouchableOpacity>
                     </View>
                     <View >
                         <Text style={styles.contentTextHeader} >Redação da Semana</Text>
@@ -37,7 +37,7 @@ export default class Register extends Component {
 
                 <View style={styles.content_buttons}> 
 
-                    <TouchableWithoutFeedback onPress={()=>{}}>
+                    <TouchableOpacity onPress={()=>{}}>
                         <View>
                             <Text style={styles.textButton}> 
                                 Texto de apoio (PDF): 
@@ -45,12 +45,12 @@ export default class Register extends Component {
                                 <Image style={styles.imgIcon} source={require('../assets/imgs/icon_pdf.png')} />
 
                         </View>
-                    </TouchableWithoutFeedback>
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.content_buttons}> 
 
-                    <TouchableWithoutFeedback onPress={()=>{}}>
+                    <TouchableOpacity onPress={()=>{}}>
                         <View>
                             <Text style={styles.textButton}> 
                                 Texto de apoio (WEB): 
@@ -58,12 +58,12 @@ export default class Register extends Component {
                                 <Image style={styles.imgIcon} source={require('../assets/imgs/icon_web.png')} />
 
                         </View>
-                    </TouchableWithoutFeedback>
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.content_buttons}> 
 
-                    <TouchableWithoutFeedback onPress={()=>{}}>
+                    <TouchableOpacity onPress={()=>{}}>
                         <View>
                             <Text style={styles.textButton}> 
                                 Video de Apoio: 
@@ -71,29 +71,29 @@ export default class Register extends Component {
                                 <Image style={styles.imgIcon} source={require('../assets/imgs/icon_video.png')} />
 
                         </View>
-                    </TouchableWithoutFeedback>
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.contentImages}> 
 
-                    <TouchableWithoutFeedback  onPress={()=>{}}>
+                    <TouchableOpacity  onPress={()=>{}}>
                         <View>
                                 <Image style={styles.imgIconLeft} source={require('../assets/imgs/icon_gallery.png')} />
                                 <Image style={styles.imgIconRight} source={require('../assets/imgs/icon_camera.png')} />
 
                         </View>
-                    </TouchableWithoutFeedback>
+                    </TouchableOpacity>
                 </View>
 
 
 
                 <View style={styles.contentSend}> 
-                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={()=>{}}>
+                    <TouchableOpacity style={styles.content_buttons} onPress={()=>{}}>
                         <View style={styles.headerSend}>
                             <Icon style={styles.iconStart} name="send" size={30} color='black' />
                             <Text style={styles.textSend} >Enviar redação</Text>
                         </View>
-                    </TouchableWithoutFeedback>  
+                    </TouchableOpacity>  
                 </View>
 
 

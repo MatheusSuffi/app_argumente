@@ -10,7 +10,7 @@ import {
         Linking,
         Button,
         TouchableHighlight,
-        TouchableWithoutFeedback
+        TouchableOpacity
     } from 'react-native'
 
 export default class Register extends Component {
@@ -19,9 +19,9 @@ export default class Register extends Component {
             <View style={styles.content} >  
                 <View style={styles.header}>
                     <View style={styles.iconStart}>
-                        <TouchableWithoutFeedback  onPress={()=>{}}>
-                            <Icon name="chevron-left" size={30} color='#FFF' /> 
-                        </TouchableWithoutFeedback>
+                        <TouchableOpacity  onPress={() => this.props.navigation.openDrawer()}>
+                            <Icon name="bars" size={30} color='#FFF'  /> 
+                        </TouchableOpacity>
                     </View>
                     <View >
                         <Text style={styles.contentTextHeader} >Fale Conosco</Text>
@@ -43,12 +43,12 @@ export default class Register extends Component {
                 </View>
 
                 <View style={{marginLeft:30, marginRight: 30, marginTop:20}} > 
-                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={()=>{}}>
+                    <TouchableOpacity style={styles.content_buttons} onPress={()=>{}}>
                         <View style={styles.headerButton}>
                             <Icon style={styles.iconStart} name="send" size={30} color='black' />
                             <Text style={styles.textButton} >Enviar Comentario</Text>
                         </View>
-                    </TouchableWithoutFeedback>  
+                    </TouchableOpacity>  
                 </View>
 
 

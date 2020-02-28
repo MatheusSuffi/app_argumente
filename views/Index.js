@@ -9,19 +9,18 @@ import {
         Image,
         Linking,
         Button,
-        TouchableHighlight,
-        TouchableWithoutFeedback
+        TouchableOpacity
     } from 'react-native'
 
-export default class Register extends Component {
+export default class Index extends Component {
     render() {
         return(
             <View style={styles.content} >  
                 <View style={styles.header}>
                     <View style={styles.iconStart}>
-                        <TouchableWithoutFeedback  onPress={()=>{}}>
-                            <Icon name="bars" size={30} color='#FFF' /> 
-                        </TouchableWithoutFeedback>
+                        <TouchableOpacity  onPress={() => this.props.navigation.openDrawer()}>
+                            <Icon name="bars" size={30} color='#FFF'  /> 
+                        </TouchableOpacity>
                     </View>
                     <View >
                         <Text style={styles.contentTextHeader} >BEM VINDO, ALUNO!</Text>
@@ -29,57 +28,57 @@ export default class Register extends Component {
 
                 </View>
                 <View style={styles.content_buttons}> 
-                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={() => navigation.navigate('Details')}>
+                    <TouchableOpacity style={styles.content_buttons} onPress={() => this.props.navigation.navigate('Perfil')}>
                         <View style={styles.headerButton}>
                             <Icon style={styles.iconStart} name="user" size={30} color='black' />
                             <Text style={styles.textButton} >Perfil</Text>
                         </View>
-                    </TouchableWithoutFeedback>      
+                    </TouchableOpacity>      
                 </View>
 
                 <View style={styles.content_buttons}> 
-                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={()=>{}}>
+                    <TouchableOpacity style={styles.content_buttons} onPress={()=>{}}>
                         <View style={styles.headerButton}>
                             <Icon style={styles.iconStart} name="book" size={30} color='black' />
                             <Text style={styles.textButton} >Tema da Semana</Text>
                         </View>
-                    </TouchableWithoutFeedback>  
+                    </TouchableOpacity>  
                 </View>
 
                 <View style={styles.content_buttons}> 
-                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={()=>{}}>
+                    <TouchableOpacity style={styles.content_buttons} onPress={()=>{}}>
                         <View style={styles.headerButton}>
                             <Icon style={styles.iconStart} name="clipboard" size={30} color='black' />
                             <Text style={styles.textButton} >Redações Finalizadas</Text>
                         </View>
-                    </TouchableWithoutFeedback>     
+                    </TouchableOpacity>     
                 </View>
 
                 <View style={styles.content_buttons}> 
-                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={()=>{}}>
+                    <TouchableOpacity style={styles.content_buttons} onPress={()=>{}}>
                         <View style={styles.headerButton}>
                             <Icon style={styles.iconStart} name="check" size={30} color='black' />
                             <Text style={styles.textButton} >Redações Corrigidas</Text>
                         </View>
-                    </TouchableWithoutFeedback>  
+                    </TouchableOpacity>  
                 </View>
 
                 <View style={styles.content_buttons}> 
-                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={()=>{}}>
+                    <TouchableOpacity style={styles.content_buttons} onPress={()=>{}}>
                         <View style={styles.headerButton}>
                             <Icon style={styles.iconStart} name="phone" size={30} color='black' />
                             <Text style={styles.textButton} >Fale Conosco</Text>
                         </View>
-                    </TouchableWithoutFeedback>    
+                    </TouchableOpacity>    
                 </View>
 
                 <View style={styles.content_buttons}> 
-                    <TouchableWithoutFeedback style={styles.content_buttons} onPress={()=>{}}>
+                    <TouchableOpacity style={styles.content_buttons} onPress={()=>{}}>
                         <View style={styles.headerButton}>
                             <Icon style={styles.iconStart} name="sign-out" size={40} color='black' />
                             <Text style={styles.textButton} >Sair</Text>
                         </View>
-                    </TouchableWithoutFeedback>  
+                    </TouchableOpacity>  
                 </View>
 
             </View>        
@@ -95,8 +94,8 @@ const styles = StyleSheet.create({
     },
     content_buttons:{ // Style dos botões (TouchableHightlight)
         marginTop: 20,
-        marginLeft: 30,
-        marginRight: 30,
+        marginLeft: 20,
+        marginRight: 20,
         flexDirection:"row",
         alignItems: 'center',
         justifyContent: 'center',
